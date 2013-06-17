@@ -3,16 +3,13 @@
 
 var path    = require('path');
 var helpers = require('yeoman-generator').test;
-var fs = require('fs');
 
 describe('colorme generator', function () {
   beforeEach(function (done) {
-    console.log("IN beforeEach...");
     helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
       if (err) {
         return done(err);
       }
-
       this.app = helpers.createGenerator('colorme:app', [
         '../../app'
       ]);
